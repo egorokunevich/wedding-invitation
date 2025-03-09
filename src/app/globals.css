@@ -1,3 +1,30 @@
+@font-face {
+  font-family: 'FleurDeLeah';
+  src: url('./fonts/FleurDeLeah-Regular.ttf');
+  /* src: url('./fonts/MeaCulpa-Regular.ttf'); */
+}
+
+@font-face {
+  font-family: 'MeaCulpa';
+  src: url('./fonts/MeaCulpa-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Birthstone';
+  src: url('./fonts/Birthstone-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Crimson';
+  src: url('./fonts/CrimsonText-Regular.ttf');
+}
+
+@theme {
+  --font-Header: FleurDeLeah, 'sans-serif';
+  --font-Title: Birthstone, 'sans-serif';
+  --font-Classic: Crimson, 'sans-serif';
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -26,7 +53,7 @@ body {
 
 * {
   box-sizing: border-box;
-  padding: 0;
+  /* padding: 0; */
   margin: 0;
 }
 
@@ -40,3 +67,5 @@ a {
     color-scheme: dark;
   }
 }
+
+@import 'tailwindcss';
