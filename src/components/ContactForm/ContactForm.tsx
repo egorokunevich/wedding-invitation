@@ -83,7 +83,7 @@ const ContactForm = ({ guestName }: { guestName: string | null }) => {
           id="name"
           defaultValue={guestName || ''}
           required
-          className="text-xl w-full outline-0 text-white pl-4 border-b-[1px] border-[rgba(0,0,0,0.2)] focus:border-[rgba(255,255,255,0.5)] duration-200"
+          className="capitalize text-xl w-full outline-0 text-white pl-4 border-b-[1px] border-[rgba(0,0,0,0.2)] focus:border-[rgba(255,255,255,0.5)] duration-200"
         />
       </div>
       <div className="">
