@@ -100,7 +100,7 @@ const Landing = () => {
   };
 
   return (
-    <main className="font-Classic w-full flex flex-col gap-10 justify-center items-center py-12 md:py-20">
+    <main className="font-Classic w-full flex flex-col gap-10 justify-center items-center py-16 md:py-20">
       <header className="w-full text-center flex justify-center items-center flex-col gap-7 px-10">
         <p className="text-xl font-MeaCulpa text-white">{t('weddingInvitation')}</p>
         <h1 className="flex gap-4 text-6xl md:text-8xl font-Header text-white">
