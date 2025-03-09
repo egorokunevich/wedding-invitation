@@ -1,0 +1,20 @@
+{
+  "weddingInvitation": "WEDDING INVITATION",
+  "invitationInfo": "WE INVITE YOU TO CELEBRATE OUR WEDDING",
+  "dearSir": "Dear Sir",
+  "dearMadam": "Dear Madam",
+  "dearGuest": "Dear Guest",
+  "eventDate": "EVENT DATE",
+  "location": "LOCATION",
+  "locationName": "Stankovo, Belarus",
+  "contactUs": "Please, contact us with information about your decision!",
+  "acceptInfo": "Would you like to share this moment with us?",
+  "yes": "Yes",
+  "no": "No",
+  "name": "Name",
+  "email": "Email",
+  "message": "Message",
+  "send": "Send",
+  "messageSuccess": "Your message has been sent successfully!",
+  "messageFailure": "Your message was not sent due to an error!"
+}

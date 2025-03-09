@@ -1,9 +1,11 @@
 import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
+import { useTranslations } from 'next-intl';
 
 emailjs.init(process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!);
 
 const ContactForm = ({ guestName }: { guestName: string | null }) => {
+  const t = useTranslations();
   const form = useRef<HTMLFormElement>(null);
   const [selectedAccept, setSelectedAccept] = useState<string>('yes');
 
@@ -14,22 +16,20 @@ const ContactForm = ({ guestName }: { guestName: string | null }) => {
       console.log(form.current);
       emailjs
         .sendForm(
-          process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!, // Service ID
-          process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!, // Template ID
+          process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+          process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
           form.current,
         )
         .then(
           result => {
             console.log('Email sent successfully!', result.text);
-            alert('Message sent successfully!');
+            alert(t('messageSuccess'));
           },
           error => {
             console.error('Failed to send email:', error.text);
-            alert('Failed to send message. Please try again.');
+            alert(t('messageFailure'));
           },
         );
-
-      //   e.currentTarget.reset(); // Reset the form after submission
     }
   };
 
@@ -61,21 +61,19 @@ const ContactForm = ({ guestName }: { guestName: string | null }) => {
       ref={form}
       onSubmit={sendEmail}
       className="font-MeaCulpa max-w-lg mx-auto bg-[rgba(0,0,0,0.2)] w-full px-4 md:px-12 py-6 flex flex-col gap-5">
-      <h2 className="text-white text-2xl">
-        Please, contact us with information about your decision!
-      </h2>
+      <h2 className="text-white text-2xl">{t('contactUs')}</h2>
       <div className="flex flex-col gap-1.5">
-        <label className="block text-md font-medium text-white">
-          Would you like to share this moment with us?
+        <label className="tracking-wide block text-md font-medium text-white">
+          {t('acceptInfo')}
         </label>
         <div className="flex w-full">
-          {createAcceptInput('yes', 'Yes')}
-          {createAcceptInput('no', 'No')}
+          {createAcceptInput('yes', t('yes'))}
+          {createAcceptInput('no', t('no'))}
         </div>
       </div>
       <div className="">
-        <label htmlFor="name" className="block text-md font-medium text-white">
-          Name
+        <label htmlFor="name" className="tracking-wide block text-md font-medium text-white">
+          {t('name')}
         </label>
         <input
           type="text"
@@ -87,8 +85,8 @@ const ContactForm = ({ guestName }: { guestName: string | null }) => {
         />
       </div>
       <div className="">
-        <label htmlFor="email" className="block text-md font-medium text-white">
-          Email
+        <label htmlFor="email" className="tracking-wide block text-md font-medium text-white">
+          {t('email')}
         </label>
         <input
           type="email"
@@ -99,8 +97,8 @@ const ContactForm = ({ guestName }: { guestName: string | null }) => {
         />
       </div>
       <div className="">
-        <label htmlFor="message" className="block text-md font-medium text-white">
-          Message
+        <label htmlFor="message" className="tracking-wide block text-md font-medium text-white">
+          {t('message')}
         </label>
         <textarea
           name="message"
@@ -112,7 +110,7 @@ const ContactForm = ({ guestName }: { guestName: string | null }) => {
       <button
         type="submit"
         className="font-Classic w-full h-12 cursor-pointer hover:bg-[rgba(255,255,255,0.2)] duration-200 flex items-center justify-center text-white text-xl tracking-wide  bg-[rgba(0,0,0,0.2)]">
-        Send message
+        {t('send')}
       </button>
     </form>
   );
