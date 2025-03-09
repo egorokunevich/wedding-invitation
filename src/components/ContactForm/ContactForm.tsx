@@ -60,7 +60,7 @@ const ContactForm = ({ guestName }: { guestName: string | null }) => {
     <form
       ref={form}
       onSubmit={sendEmail}
-      className="font-MeaCulpa max-w-lg mx-auto bg-[rgba(0,0,0,0.2)] w-full px-4 md:px-12 py-6 flex flex-col gap-5">
+      className="font-MeaCulpa max-w-lg mx-auto bg-[rgba(0,0,0,0.35)] w-full px-4 md:px-12 py-6 flex flex-col gap-5">
       <h2 className="text-white text-2xl">{t('contactUs')}</h2>
       <div className="flex flex-col gap-1.5">
         <label className="tracking-wide block text-md font-medium text-white">
@@ -81,7 +81,7 @@ const ContactForm = ({ guestName }: { guestName: string | null }) => {
           id="name"
           defaultValue={guestName || ''}
           required
-          className="capitalize text-xl w-full outline-0 text-white pl-4 border-b-[1px] border-[rgba(0,0,0,0.2)] focus:border-[rgba(255,255,255,0.5)] duration-200"
+          className="capitalize text-xl w-full outline-0 focus:bg-[rgba(255,255,255,0.1)] text-white pl-4 border-b-[1px] border-[rgba(0,0,0,0.2)] focus:border-[rgba(255,255,255,0.5)] duration-200"
         />
       </div>
       <div className="">
@@ -93,7 +93,7 @@ const ContactForm = ({ guestName }: { guestName: string | null }) => {
           name="user_email"
           id="email"
           required
-          className="text-xl w-full outline-0 text-white pl-4 border-b-[1px] border-[rgba(0,0,0,0.2)] focus:border-[rgba(255,255,255,0.5)] duration-200"
+          className="text-xl w-full outline-0 focus:bg-[rgba(255,255,255,0.1)] text-white pl-4 border-b-[1px] border-[rgba(0,0,0,0.2)] focus:border-[rgba(255,255,255,0.5)] duration-200"
         />
       </div>
       <div className="">
@@ -105,7 +105,7 @@ const ContactForm = ({ guestName }: { guestName: string | null }) => {
           id="message"
           rows={4}
           required
-          className="text-xl text-white mt-1 block w-full px-3 py-2 border-[1px] border-[rgba(0,0,0,0.2)] focus:outline-none focus:border-[rgba(255,255,255,0.5)]"></textarea>
+          className="text-xl text-white mt-1  focus:bg-[rgba(255,255,255,0.1)] block w-full px-3 py-2 border-[1px] border-[rgba(0,0,0,0.2)] focus:outline-none focus:border-[rgba(255,255,255,0.5)]"></textarea>
       </div>
       <button
         type="submit"
