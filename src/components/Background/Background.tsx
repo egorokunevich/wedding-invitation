@@ -3,9 +3,9 @@ import { PropsWithChildren } from 'react';
 const Background = ({ children }: PropsWithChildren) => {
   return (
     <>
-      <div className="fixed left-0 top-0 w-full h-lvh overflow-hidden -z-10">
+      <div className="fixed left-0 top-0 w-full  overflow-hidden -z-10">
         <img
-          className="w-full h-full object-cover"
+          className="w-full h-lvh object-cover"
           src="/background-forest-3.jpg"
           alt="forest background"
         />
