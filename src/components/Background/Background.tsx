@@ -1,4 +1,4 @@
-import { PropsWithChildren } from 'react';
+import { PropsWithChildren, Suspense } from 'react';
 
 const Background = ({ children }: PropsWithChildren) => {
   return (
@@ -11,7 +11,7 @@ const Background = ({ children }: PropsWithChildren) => {
         />
         <div className="absolute left-0 top-0 w-full h-full backdrop-blur-[5px]"></div>
       </div>
-      {children}
+      <Suspense>{children}</Suspense>
     </>
   );
 };
