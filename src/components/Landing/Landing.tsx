@@ -4,6 +4,7 @@ import { useSearchParams } from 'next/navigation';
 import { PropsWithChildren } from 'react';
 import ContactForm from '../ContactForm/ContactForm';
 import { useTranslations } from 'next-intl';
+import LanguageToggle from '../LanguageToggle/LanguageToggle';
 
 interface IHeaderSectionProps extends PropsWithChildren {
   onClick?: () => void;
@@ -117,6 +118,7 @@ const Landing = () => {
       <section className="w-full px-3 flex flex-col items-center justify-center">
         <ContactForm guestName={guestName} />
       </section>
+      <LanguageToggle />
     </main>
   );
 };
