@@ -1,8 +1,7 @@
 'use client';
 
 import { useParams, useRouter, useSearchParams } from 'next/navigation';
-import langIcon from '../../../public/assets/language.svg';
-import Image from 'next/image';
+import DownloadIcon from '../Icons/DownloadIcon';
 
 const LanguageToggle = () => {
   const router = useRouter();
@@ -22,13 +21,16 @@ const LanguageToggle = () => {
             return '';
           }
 
-          return `?${name ? `name=${name}` : ''}&${gender ? `gender=${gender}` : ''}`;
+          return `?${name ? `name=${name}` : ''}&${
+            gender ? `gender=${gender}` : ''
+          }`;
         };
 
         router.push(`${getOtherLocale()}${createSearchParams()}`);
       }}
-      className="font-Classic flex p-2.5 gap-2.5 items-center justify-center cursor-pointer duration-200 absolute top-2 left-4 hover:bg-[rgba(255,255,255,0.2)] text-[rgb(212,212,212)]">
-      <Image src={langIcon} alt="language" width={20} height={20} />
+      className="font-Classic flex p-2.5 gap-2.5 items-center justify-center cursor-pointer duration-200 border-b-[1px] border-b-transparent hover:border-white text-[rgb(212,212,212)] hover:text-WHITE"
+    >
+      <DownloadIcon color="[rgb(212,212,212)]" width="20px" height="20px" />
       <p className="text-center uppercase">{getOtherLocale()}</p>
     </div>
   );
