@@ -3,10 +3,9 @@
 import { useSearchParams } from 'next/navigation';
 import { PropsWithChildren } from 'react';
 import { useTranslations } from 'next-intl';
-// import Background from '../Background/Background';
 import Section from '../Section/Section';
 import Divider from '../Divider/Divider';
-import Background from '../Background/Background';
+import TransparentBackground from '../TransparentBackground/TransparentBackground';
 
 interface IHeaderSectionProps extends PropsWithChildren {
   onClick?: () => void;
@@ -89,7 +88,7 @@ const HeaderInfo = () => {
 
   return (
     <Section className="relative w-full py-10 bg-gradient-to-t from-DARK to-transparent">
-      <Background>
+      <TransparentBackground>
         <div className="w-full text-center flex justify-center items-center flex-col gap-7 px-10  py-10">
           <p className="text-xl font-MeaCulpa text-WHITE">
             {t('weddingInvitation')}
@@ -107,7 +106,7 @@ const HeaderInfo = () => {
         <div className="w-full flex flex-col items-center justify-center">
           {renderContent()}
         </div>
-      </Background>
+      </TransparentBackground>
     </Section>
   );
 };

@@ -26,8 +26,12 @@
 
   --color-BLACK: #00100b;
   --color-WHITE: #d7fff1;
+  --color-GRAY: #555555;
+  --color-DARK_GRAY: #363636;
   --color-DARK: #1e352f;
+  --color-DARK_T: #1e352f21;
   --color-ACCENT: #d6ab80;
+  --color-ACCENT_T: #d6ab808a;
   --color-GREEN: #3f6c51;
 }
 

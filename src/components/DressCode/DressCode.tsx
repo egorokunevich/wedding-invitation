@@ -2,24 +2,24 @@
 
 import Section from '../Section/Section';
 import Divider from '../Divider/Divider';
-import Background from '../Background/Background';
+import TransparentBackground from '../TransparentBackground/TransparentBackground';
+import { useTranslations } from 'next-intl';
 
 const DressCode = () => {
+  const t = useTranslations();
+
   return (
     <Section
       id="dress-code"
-      className="relative w-full py-16 px-3 flex flex-col items-center gap-5 text-WHITE font-Classic text-2xl text-center"
+      className="relative w-full py-16 px-3 font-Classic text-2xl text-center"
     >
-      <Background>
+      <TransparentBackground className="flex flex-col items-center gap-5 text-WHITE">
         <h3 className="font-Classic uppercase text-3xl w-full text-center">
-          Дресс-код
+          {t('dressCode')}
         </h3>
-        <p>
-          Наш праздник будет проходить в формате вечеринки, поэтому мы никак не
-          ограничиваем образы гостей.
-        </p>
+        <p>{t('dressCodeInfo')}</p>
         <Divider />
-      </Background>
+      </TransparentBackground>
     </Section>
   );
 };

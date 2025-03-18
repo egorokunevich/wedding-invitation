@@ -6,7 +6,7 @@
   "dearGuest": "Dear Guest",
   "eventDate": "EVENT DATE",
   "location": "LOCATION",
-  "locationName": "Stankovo, Belarus",
+  "locationName": "STANKOVO",
   "contactUs": "Please, contact us with information about your decision!",
   "acceptInfo": "Would you like to share this moment with us?",
   "yes": "Yes",
@@ -15,6 +15,11 @@
   "email": "Email",
   "message": "Message",
   "send": "Send",
+  "sending": "Sending...",
+  "giftsTitle": "What to gift?",
+  "giftsInfo": "Don't rack your brains over gifts! Instead of flowers, give us cat food for the shelter or a bottle of wine. If you prefer to leave all the hardships of choosing to us, then just give money.",
+  "dressCode": "DRESS-CODE",
+  "dressCodeInfo": "Our celebration will be held in a party format, so we do not limit the looks of the guests in any way.",
   "messageSuccess": "Your message has been sent successfully!",
   "messageFailure": "Your message was not sent due to an error!"
 }
