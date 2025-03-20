@@ -28,10 +28,10 @@ const LanguageToggle = () => {
 
         router.push(`${getOtherLocale()}${createSearchParams()}`);
       }}
-      className="font-Classic flex p-2.5 gap-2.5 items-center justify-center cursor-pointer duration-200 border-b-[1px] border-b-transparent hover:border-white text-[rgb(212,212,212)] hover:text-WHITE"
+      className="font-Classic flex p-2.5 gap-2.5 items-center justify-center cursor-pointer duration-200 border-b-[1px] border-b-transparent hover:border-ACCENT text-[rgb(212,212,212)] hover:text-ACCENT"
     >
       <DownloadIcon color="[rgb(212,212,212)]" width="20px" height="20px" />
-      <p className="text-center uppercase">{getOtherLocale()}</p>
+      <p className="text-center uppercase">{locale}</p>
     </div>
   );
 };

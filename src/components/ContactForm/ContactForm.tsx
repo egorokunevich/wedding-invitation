@@ -81,7 +81,7 @@ const ContactForm = () => {
         {/* Submit */}
         <button
           type="submit"
-          className="font-Classic w-full h-12 cursor-pointer hover:bg-[rgba(255,255,255,0.2)] duration-200 flex items-center justify-center  text-xl tracking-wide  bg-[rgba(0,0,0,0.2)]"
+          className="font-Classic text-BLACK uppercase hover:text-WHITE w-full h-12 cursor-pointer hover:bg-ACCENT duration-200 flex items-center justify-center  text-xl tracking-wide border-[1px] border-ACCENT bg-WHITE"
         >
           {t('send')}
         </button>

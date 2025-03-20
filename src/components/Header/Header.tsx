@@ -10,23 +10,30 @@ const Header = () => {
     return (
       <>
         <a
+          href="#invitation"
+          onClick={() => setIsBurgerOpen(false)}
+          className="hover:text-ACCENT border-b-[1px] border-transparent hover:border-ACCENT duration-200 flex items-center p-2.5"
+        >
+          Приглашение
+        </a>
+        <a
           href="#gifts"
           onClick={() => setIsBurgerOpen(false)}
-          className="  hover:text-WHITE border-b-[1px] border-transparent hover:border-white duration-200 flex items-center p-2.5"
+          className="hover:text-ACCENT border-b-[1px] border-transparent hover:border-ACCENT duration-200 flex items-center p-2.5"
         >
           Подарки
         </a>
         <a
           href="#dress-code"
           onClick={() => setIsBurgerOpen(false)}
-          className="  hover:text-WHITE border-b-[1px] border-transparent hover:border-white duration-200 flex items-center p-2.5"
+          className="hover:text-ACCENT border-b-[1px] border-transparent hover:border-ACCENT duration-200 flex items-center p-2.5"
         >
           Дресс-код
         </a>
         <a
           href="#contact-form"
           onClick={() => setIsBurgerOpen(false)}
-          className="  hover:text-WHITE border-b-[1px] border-transparent hover:border-white duration-200 flex items-center p-2.5"
+          className="hover:text-ACCENT border-b-[1px] border-transparent hover:border-ACCENT duration-200 flex items-center p-2.5"
         >
           Фидбек
         </a>
@@ -35,7 +42,7 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed max-w-7xl top-0 w-full z-20 h-14 flex items-center p-2 bg-DARK shadow-[0_1px_5px_rgba(0,16,11,0.3)]">
+    <header className="fixed max-w-7xl top-0 gap-10 w-full z-20 h-14 flex items-center p-2 bg-DARK shadow-[0_1px_5px_rgba(0,16,11,0.3)]">
       <LanguageToggle />
       {/* Mobile */}
       <div className="flex md:hidden justify-end w-full">
@@ -43,9 +50,9 @@ const Header = () => {
           onClick={() => setIsBurgerOpen((prev) => !prev)}
           className="flex flex-col gap-1 cursor-pointer p-2"
         >
-          <div className="w-[20px] h-[2px] bg-white"></div>
-          <div className="w-[20px] h-[2px] bg-white"></div>
-          <div className="w-[20px] h-[2px] bg-white"></div>
+          <div className="w-[20px] h-[2px] bg-LIGHT_GRAY"></div>
+          <div className="w-[20px] h-[2px] bg-LIGHT_GRAY"></div>
+          <div className="w-[20px] h-[2px] bg-LIGHT_GRAY"></div>
         </div>
         {isBurgerOpen && (
           <div className="fixed top-0 right-0 flex items-center md:hidden w-full h-full bg-[#3A4236] py-20 px-6 text-xl text-WHITE">
@@ -65,7 +72,7 @@ const Header = () => {
         )}
       </div>
       {/* Desktop */}
-      <div className="items-center hidden md:flex h-[45px] text-[rgb(212,212,212)]">
+      <div className="items-center hidden md:flex h-[45px] text-LIGHT_GRAY">
         {renderMenuItems()}
       </div>
     </header>

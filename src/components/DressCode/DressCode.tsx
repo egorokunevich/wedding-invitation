@@ -11,10 +11,10 @@ const DressCode = () => {
   return (
     <Section
       id="dress-code"
-      className="relative w-full py-16 px-3 font-Classic text-2xl text-center"
+      className="font-Classic tracking-wide relative w-full py-16 px-3 text-2xl text-center"
     >
       <TransparentBackground className="flex flex-col items-center gap-5 text-WHITE">
-        <h3 className="font-Classic uppercase text-3xl w-full text-center">
+        <h3 className="font-Classic font-thin tracking-wide uppercase text-3xl w-full text-center">
           {t('dressCode')}
         </h3>
         <p>{t('dressCodeInfo')}</p>

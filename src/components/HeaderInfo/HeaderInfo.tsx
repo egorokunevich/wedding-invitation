@@ -87,7 +87,10 @@ const HeaderInfo = () => {
   };
 
   return (
-    <Section className="relative w-full py-10 bg-gradient-to-t from-DARK to-transparent">
+    <Section
+      id="invitation"
+      className="relative w-full py-10 bg-gradient-to-t from-DARK to-transparent"
+    >
       <TransparentBackground>
         <div className="w-full text-center flex justify-center items-center flex-col gap-7 px-10  py-10">
           <p className="text-xl font-MeaCulpa text-WHITE">

@@ -1,3 +1,5 @@
+import Divider from '@/components/Divider/Divider';
+
 export type FoodPreference = { value: string; preference: boolean };
 
 interface IFoodPreferenceSectionProps {
@@ -17,27 +19,38 @@ const FoodPreferenceSection = ({
 
   const createFoodCheckbox = (value: string, label: string) => {
     return (
-      <div className="flex gap-2 items-center">
-        <input
-          type="checkbox"
-          id={value}
-          name="food_preferences"
-          onChange={(event) =>
-            handleFoodCheck({ value, preference: event.target.checked })
-          }
-          className="relative peer shrink-0 appearance-none w-4 h-4 border-[1px] border-BLACK bg-transparent checked:bg-ACCENT checked:border-0"
-        />
-        <label htmlFor={value}>{label}</label>
+      <div className="check-input flex gap-2 items-center group cursor-pointer">
+        <div className="input-wrapper relative w-8 h-8 md:w-6 md:h-6">
+          <input
+            type="checkbox"
+            id={value}
+            name="food_preferences"
+            onChange={(event) =>
+              handleFoodCheck({ value, preference: event.target.checked })
+            }
+            className="relative cursor-pointer peer shrink-0 appearance-none w-8 h-8 md:w-6 md:h-6 border-[1px] border-BLACK bg-transparent checked:bg-ACCENT checked:border-transparent"
+          />
+        </div>
+        <label
+          htmlFor={value}
+          className="w-full flex items-center cursor-pointer"
+        >
+          {label}
+        </label>
       </div>
     );
   };
 
   return (
-    <div>
-      {createFoodCheckbox('fish', 'Рыба')}
-      {createFoodCheckbox('chiken', 'Курица')}
-      {createFoodCheckbox('pork', 'Свинина')}
-      {createFoodCheckbox('beef', 'Говядина')}
+    <div className="flex flex-col gap-4">
+      <Divider />
+      <p>Укажите Ваши предпочтения в еде, если для Вас это имеет значение</p>
+      <div className="grid grid-cols-2 gap-2">
+        {createFoodCheckbox('fish', 'Рыба')}
+        {createFoodCheckbox('chiken', 'Курица')}
+        {createFoodCheckbox('pork', 'Свинина')}
+        {createFoodCheckbox('beef', 'Говядина')}
+      </div>
     </div>
   );
 };
