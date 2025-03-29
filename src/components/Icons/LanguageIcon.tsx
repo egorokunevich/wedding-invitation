@@ -1,6 +1,6 @@
 import { SVGProps } from 'react';
 
-const DownloadIcon = (props: SVGProps<SVGSVGElement>) => (
+const LanguageIcon = (props: SVGProps<SVGSVGElement>) => (
   <svg
     fill="currentColor"
     height="800px"
@@ -9,7 +9,8 @@ const DownloadIcon = (props: SVGProps<SVGSVGElement>) => (
     id="XMLID_275_"
     xmlns="http://www.w3.org/2000/svg"
     {...props}
-    viewBox="0 0 24 24">
+    viewBox="0 0 24 24"
+  >
     <g id="language">
       <g>
         <path
@@ -25,4 +26,4 @@ const DownloadIcon = (props: SVGProps<SVGSVGElement>) => (
   </svg>
 );
 
-export default DownloadIcon;
+export default LanguageIcon;

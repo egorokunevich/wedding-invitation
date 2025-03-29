@@ -12,6 +12,9 @@ import usePreferences from '@/hooks/usePreferences';
 import NameField from './NameField/NameField';
 import MessageField from './MessageField/MessageField';
 import Divider from '../Divider/Divider';
+import InfoIcon from '../Icons/InfoIcon';
+
+const DEADLINE_DATE = '01.05.2025';
 
 emailjs.init(process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!);
 
@@ -75,15 +78,10 @@ const ContactForm = () => {
         <h2 className=" text-2xl">{t('contactUs')}</h2>
 
         {/* Acception */}
-        <div className="flex flex-col gap-1.5">
-          <label className="tracking-wide block text-md font-medium ">
-            {t('acceptInfo')}
-          </label>
-          <AcceptInvitationSection
-            selectedAccept={selectedAccept}
-            setAcception={setSelectedAccept}
-          />
-        </div>
+        <AcceptInvitationSection
+          selectedAccept={selectedAccept}
+          setAcception={setSelectedAccept}
+        />
 
         {/* Name */}
         <NameField />
@@ -116,6 +114,13 @@ const ContactForm = () => {
         >
           {t('send')}
         </button>
+        <div className="w-full flex items-center gap-4 ">
+          <InfoIcon width="40px" height="40px" className="text-ACCENT" />
+          <p>
+            {t('deadlineInfo')}{' '}
+            <span className="font-semibold">{DEADLINE_DATE}</span>
+          </p>
+        </div>
       </form>
     </Section>
   );

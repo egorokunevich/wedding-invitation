@@ -7,6 +7,8 @@ import Section from '../Section/Section';
 import Divider from '../Divider/Divider';
 import TransparentBackground from '../TransparentBackground/TransparentBackground';
 
+const EVENT_DATE = '23.08.2025';
+
 interface IHeaderSectionProps extends PropsWithChildren {
   onClick?: () => void;
 }
@@ -31,11 +33,7 @@ const HeaderInfo = () => {
   const renderDateInfo = () => {
     return (
       <HeaderSection>
-        {/* <p>{t('eventDate')}</p>
-        <p className="text-base tracking-wider">{'23.08.25'}</p> */}
-
-        <p className="text-base md:text-2xl">{'23.08.25'}</p>
-        {/* <div className="w-[20%] h-[1px] bg-WHITE"></div> */}
+        <p className="text-xl md:text-2xl">{EVENT_DATE}</p>
         <p className="text-xsm md:text-sm opacity-80">{t('eventDate')}</p>
       </HeaderSection>
     );
@@ -44,7 +42,7 @@ const HeaderInfo = () => {
   const renderGuestInfo = () => {
     return (
       <HeaderSection>
-        <p>{`${
+        <p className="font-light">{`${
           guestGender === 'male'
             ? t('dearSir')
             : guestGender === 'female'

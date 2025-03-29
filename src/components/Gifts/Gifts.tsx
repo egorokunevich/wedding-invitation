@@ -29,7 +29,7 @@ const Gifts = () => {
         {createIcon(catFoodIcon)}
         {createIcon(moneyIcon)}
       </div>
-      <p>{t('giftsInfo')}</p>
+      <p className="font-light">{t('giftsInfo')}</p>
       <Divider />
     </Section>
   );

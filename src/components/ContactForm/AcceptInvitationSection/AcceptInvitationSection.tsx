@@ -46,9 +46,14 @@ const AcceptInvitationSection = ({
   };
 
   return (
-    <div className="flex w-full">
-      {createAcceptInput('yes', t('yes'))}
-      {createAcceptInput('no', t('no'))}
+    <div className="flex flex-col gap-4">
+      <label className="tracking-wide block text-md font-light ">
+        {t('acceptInfo')}
+      </label>
+      <div className="flex w-full">
+        {createAcceptInput('yes', t('yes'))}
+        {createAcceptInput('no', t('no'))}
+      </div>
     </div>
   );
 };
