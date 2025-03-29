@@ -1,16 +1,13 @@
 import type { Metadata } from 'next';
 
-const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || 'https://alinaegorwedding.online';
-
 export const metadata: Metadata = {
   title: 'Alina & Egor Wedding',
   description: 'Invitation to our wedding!',
-  metadataBase: new URL(SITE_URL),
+  metadataBase: new URL('https://www.alinaegorwedding.online'),
   openGraph: {
     title: 'Alina & Egor',
     description: 'Invitation to our wedding!',
-    url: SITE_URL,
+    url: 'https://www.alinaegorwedding.online',
     siteName: 'Alina & Egor Wedding',
     images: [
       {
@@ -30,7 +27,7 @@ export const metadata: Metadata = {
     images: ['/og-image.png'],
   },
   alternates: {
-    canonical: 'https://www.alinaegorwedding.online/',
+    canonical: 'https://www.alinaegorwedding.online',
     languages: {
       en: 'https://www.alinaegorwedding.online/en',
       ru: 'https://www.alinaegorwedding.online/ru',
