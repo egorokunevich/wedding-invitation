@@ -10,6 +10,8 @@ const usePreferences = () => {
       { name: t('chicken'), value: 'chicken', preference: false },
       { name: t('pork'), value: 'pork', preference: false },
       { name: t('beef'), value: 'beef', preference: false },
+      { name: t('allEater'), value: 'allEater', preference: false },
+      { name: t('vegetarian'), value: 'vegetarian', preference: false },
     ];
   };
 
