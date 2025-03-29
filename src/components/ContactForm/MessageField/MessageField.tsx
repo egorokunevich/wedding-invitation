@@ -9,7 +9,6 @@ const MessageField = () => {
         name="message"
         id="message"
         rows={4}
-        required
         className="peer text-xl resize-none mt-1 focus:bg-[rgba(255,255,255,0.1)] block w-full px-3 py-2 border-[1px] border-[rgba(0,0,0,0.2)] focus:outline-none focus:border-ACCENT"
       ></textarea>
       <label

@@ -32,11 +32,11 @@ const ContactForm = () => {
 
       const preferredFood = foodPreferences
         .filter((item) => item.preference)
-        .map((item) => item.value);
+        .map((item) => t(item.value));
 
       const preferredDrinks = drinkPreferences
         .filter((item) => item.preference)
-        .map((item) => item.value);
+        .map((item) => t(item.value));
 
       const data = {
         ...convertedFormData,

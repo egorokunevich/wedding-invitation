@@ -16,7 +16,7 @@ const usePreferences = () => {
   const getDrinks = (): Preference[] => {
     return [
       { name: t('champagne'), value: 'champagne', preference: false },
-      { name: t('redWine'), value: 'fish', preference: false },
+      { name: t('redWine'), value: 'redWine', preference: false },
       { name: t('whiteWine'), value: 'whiteWine', preference: false },
       { name: t('hardDrinks'), value: 'hardDrinks', preference: false },
       { name: t('allDrinks'), value: 'allDrinks', preference: false },
