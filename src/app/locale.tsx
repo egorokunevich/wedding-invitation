@@ -29,6 +29,13 @@ export const metadata: Metadata = {
     description: 'Wedding invitation website',
     images: ['/og-image.png'],
   },
+  alternates: {
+    canonical: 'https://www.alinaegorwedding.online/',
+    languages: {
+      en: 'https://www.alinaegorwedding.online/en',
+      ru: 'https://www.alinaegorwedding.online/ru',
+    },
+  },
 };
 
 export default function RootLayout({
