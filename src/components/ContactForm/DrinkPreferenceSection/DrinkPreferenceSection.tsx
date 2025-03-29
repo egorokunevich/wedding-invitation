@@ -1,13 +1,13 @@
 import Divider from '@/components/Divider/Divider';
 import { Preference } from '@/utils/types';
 
-interface IFoodPreferenceSectionProps {
+interface IDrinkPreferenceSectionProps {
   setPreferences: React.Dispatch<React.SetStateAction<Preference[]>>;
 }
 
-const FoodPreferenceSection = ({
+const DrinkPreferenceSection = ({
   setPreferences,
-}: IFoodPreferenceSectionProps) => {
+}: IDrinkPreferenceSectionProps) => {
   const handleCheck = ({ value, preference }: Preference) => {
     const getFilteredList = (list: Preference[]): Preference[] => {
       const filteredList = list.filter((item) => item.value !== value);
@@ -23,7 +23,7 @@ const FoodPreferenceSection = ({
           <input
             type="checkbox"
             id={value}
-            name="food_preferences"
+            name="drink_preferences"
             onChange={(event) =>
               handleCheck({ value, preference: event.target.checked })
             }
@@ -43,7 +43,7 @@ const FoodPreferenceSection = ({
   return (
     <div className="flex flex-col gap-4">
       <Divider />
-      <p>Ваши предпочтения в еде</p>
+      <p>Ваши предпочтения в напитках</p>
       <div className="grid grid-cols-2 gap-2">
         {createCheckbox('fish', 'Рыба')}
         {createCheckbox('chiken', 'Курица')}
@@ -54,4 +54,4 @@ const FoodPreferenceSection = ({
   );
 };
 
-export default FoodPreferenceSection;
+export default DrinkPreferenceSection;

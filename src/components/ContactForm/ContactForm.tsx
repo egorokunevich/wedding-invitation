@@ -6,10 +6,12 @@ import toast from 'react-hot-toast';
 import AcceptInvitationSection, {
   AcceptionOptions,
 } from './AcceptInvitationSection/AcceptInvitationSection';
-import FoodPreferenceSection, {
-  FoodPreference,
-} from './FoodPreferenceSection/FoodPreferenceSection';
-import ContactInfoSection from './ContactInfoSection/ContactInfoSection';
+import PreferenceSection from './PreferenceSection/PreferenceSection';
+import { Preference } from '@/utils/types';
+import usePreferences from '@/hooks/usePreferences';
+import NameField from './NameField/NameField';
+import MessageField from './MessageField/MessageField';
+import Divider from '../Divider/Divider';
 
 emailjs.init(process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!);
 
@@ -17,7 +19,9 @@ const ContactForm = () => {
   const t = useTranslations();
   const form = useRef<HTMLFormElement>(null);
   const [selectedAccept, setSelectedAccept] = useState<AcceptionOptions>('yes');
-  const [foodPreferences, setFoodPreferences] = useState<FoodPreference[]>([]);
+  const [foodPreferences, setFoodPreferences] = useState<Preference[]>([]);
+  const [drinkPreferences, setDrinkPreferences] = useState<Preference[]>([]);
+  const { getFood, getDrinks } = usePreferences();
 
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -30,11 +34,16 @@ const ContactForm = () => {
         .filter((item) => item.preference)
         .map((item) => item.value);
 
+      const preferredDrinks = drinkPreferences
+        .filter((item) => item.preference)
+        .map((item) => item.value);
+
       const data = {
         ...convertedFormData,
         user_name: (convertedFormData['user_name'] as string).toUpperCase(),
         user_accept: selectedAccept === 'yes' ? true : false,
         food_preferences: preferredFood,
+        drink_preferences: preferredDrinks,
       };
 
       console.table(data);
@@ -61,23 +70,45 @@ const ContactForm = () => {
       <form
         ref={form}
         onSubmit={sendEmail}
-        className="font-MeaCulpa max-w-lg mx-auto w-full px-4 md:px-12 py-6 flex flex-col gap-5"
+        className="font-MeaCulpa max-w-lg mx-auto w-full px-4 md:px-12 py-6 flex flex-col gap-7"
       >
         <h2 className=" text-2xl">{t('contactUs')}</h2>
+
+        {/* Acception */}
         <div className="flex flex-col gap-1.5">
           <label className="tracking-wide block text-md font-medium ">
             {t('acceptInfo')}
           </label>
-          {/* Acception */}
           <AcceptInvitationSection
             selectedAccept={selectedAccept}
             setAcception={setSelectedAccept}
           />
         </div>
 
-        <ContactInfoSection />
+        {/* Name */}
+        <NameField />
+
         {/* Food */}
-        <FoodPreferenceSection setPreferences={setFoodPreferences} />
+        <PreferenceSection
+          setPreferences={setFoodPreferences}
+          sectionTitle={t('foodPreferences')}
+          variants={getFood()}
+          emailJsVariableName="food_preferences"
+        />
+
+        {/* Drinks */}
+        <PreferenceSection
+          setPreferences={setDrinkPreferences}
+          sectionTitle={t('drinkPreferences')}
+          variants={getDrinks()}
+          emailJsVariableName="drink_preferences"
+        />
+
+        <Divider />
+
+        {/* Message */}
+        <MessageField />
+
         {/* Submit */}
         <button
           type="submit"

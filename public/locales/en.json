@@ -21,5 +21,17 @@
   "dressCode": "DRESS-CODE",
   "dressCodeInfo": "Our celebration will be held in a party format, so we do not limit the looks of the guests in any way.",
   "messageSuccess": "Your message has been sent successfully!",
-  "messageFailure": "Your message was not sent due to an error!"
+  "messageFailure": "Your message was not sent due to an error!",
+  "foodPreferences": "Your food preferences",
+  "drinkPreferences": "Your drinks preferences",
+  "fish": "Fish",
+  "chicken": "Chicken",
+  "pork": "Pork",
+  "beef": "Beef",
+  "champagne": "Champagne",
+  "redWine": "Red wine",
+  "whiteWine": "White wine",
+  "hardDrinks": "Hard drinks",
+  "allDrinks": "Any drinks",
+  "sober": "Sober"
 }

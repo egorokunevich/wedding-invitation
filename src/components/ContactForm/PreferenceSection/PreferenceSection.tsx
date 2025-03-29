@@ -1,31 +1,48 @@
 import Divider from '@/components/Divider/Divider';
 import { Preference } from '@/utils/types';
 
-interface IFoodPreferenceSectionProps {
+interface IPreferenceSectionProps {
   setPreferences: React.Dispatch<React.SetStateAction<Preference[]>>;
+  variants: Preference[];
+  sectionTitle: string;
+  emailJsVariableName: string;
+  dividerTop?: boolean;
+  dividerBottom?: boolean;
 }
 
-const FoodPreferenceSection = ({
+const PreferenceSection = ({
   setPreferences,
-}: IFoodPreferenceSectionProps) => {
-  const handleCheck = ({ value, preference }: Preference) => {
+  emailJsVariableName,
+  sectionTitle,
+  variants,
+  dividerTop,
+  dividerBottom,
+}: IPreferenceSectionProps) => {
+  const handleCheck = ({ value, preference, name }: Preference) => {
     const getFilteredList = (list: Preference[]): Preference[] => {
       const filteredList = list.filter((item) => item.value !== value);
-      return [...filteredList, { value, preference }];
+      return [...filteredList, { value, preference, name }];
     };
     setPreferences((prev) => getFilteredList(prev));
   };
 
   const createCheckbox = (value: string, label: string) => {
     return (
-      <div className="check-input flex items-center group cursor-pointer">
+      <div
+        key={value}
+        className="check-input flex items-center group cursor-pointer"
+      >
         <div className="input-wrapper relative w-8 h-8 md:w-6 md:h-6">
           <input
             type="checkbox"
             id={value}
-            name="food_preferences"
+            name={emailJsVariableName}
             onChange={(event) =>
-              handleCheck({ value, preference: event.target.checked })
+              handleCheck({
+                value,
+                preference: event.target.checked,
+                name: label,
+              })
             }
             className="relative cursor-pointer peer shrink-0 appearance-none w-8 h-8 md:w-6 md:h-6 border-[1px] border-BLACK bg-transparent checked:bg-ACCENT checked:border-transparent"
           />
@@ -42,16 +59,16 @@ const FoodPreferenceSection = ({
 
   return (
     <div className="flex flex-col gap-4">
-      <Divider />
-      <p>Ваши предпочтения в еде</p>
+      {dividerTop && <Divider />}
+
+      <p>{sectionTitle}</p>
       <div className="grid grid-cols-2 gap-2">
-        {createCheckbox('fish', 'Рыба')}
-        {createCheckbox('chiken', 'Курица')}
-        {createCheckbox('pork', 'Свинина')}
-        {createCheckbox('beef', 'Говядина')}
+        {variants.map((variant) => createCheckbox(variant.value, variant.name))}
       </div>
+
+      {dividerBottom && <Divider />}
     </div>
   );
 };
 
-export default FoodPreferenceSection;
+export default PreferenceSection;
