@@ -38,5 +38,9 @@
   "whiskey": "Whiskey",
   "allDrinks": "Any drinks",
   "sober": "Sober",
-  "deadlineInfo": "It is important for us that you give us an answer before"
+  "deadlineInfo": "It is important for us that you give us an answer before",
+  "nav_invitation": "Invitation",
+  "nav_gifts": "Gifts",
+  "nav_dressCode": "Dress-code",
+  "nav_feedback": "Contact us"
 }

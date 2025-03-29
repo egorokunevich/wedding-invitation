@@ -2,8 +2,10 @@
 
 import { useState } from 'react';
 import LanguageToggle from '../LanguageToggle/LanguageToggle';
+import { useTranslations } from 'next-intl';
 
 const Header = () => {
+  const t = useTranslations();
   const [isBurgerOpen, setIsBurgerOpen] = useState(false);
 
   const renderMenuItems = () => {
@@ -14,28 +16,28 @@ const Header = () => {
           onClick={() => setIsBurgerOpen(false)}
           className="hover:text-ACCENT border-b-[1px] border-transparent hover:border-ACCENT duration-200 flex items-center p-2.5"
         >
-          Приглашение
+          {t('nav_invitation')}
         </a>
         <a
           href="#gifts"
           onClick={() => setIsBurgerOpen(false)}
           className="hover:text-ACCENT border-b-[1px] border-transparent hover:border-ACCENT duration-200 flex items-center p-2.5"
         >
-          Подарки
+          {t('nav_gifts')}
         </a>
         <a
           href="#dress-code"
           onClick={() => setIsBurgerOpen(false)}
           className="hover:text-ACCENT border-b-[1px] border-transparent hover:border-ACCENT duration-200 flex items-center p-2.5"
         >
-          Дресс-код
+          {t('nav_dressCode')}
         </a>
         <a
           href="#contact-form"
           onClick={() => setIsBurgerOpen(false)}
           className="hover:text-ACCENT border-b-[1px] border-transparent hover:border-ACCENT duration-200 flex items-center p-2.5"
         >
-          Фидбек
+          {t('nav_feedback')}
         </a>
       </>
     );
