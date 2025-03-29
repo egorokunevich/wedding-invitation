@@ -18,7 +18,9 @@ const usePreferences = () => {
       { name: t('champagne'), value: 'champagne', preference: false },
       { name: t('redWine'), value: 'redWine', preference: false },
       { name: t('whiteWine'), value: 'whiteWine', preference: false },
-      { name: t('hardDrinks'), value: 'hardDrinks', preference: false },
+      { name: t('vodka'), value: 'vodka', preference: false },
+      { name: t('cognac'), value: 'cognac', preference: false },
+      { name: t('whiskey'), value: 'whiskey', preference: false },
       { name: t('allDrinks'), value: 'allDrinks', preference: false },
       { name: t('sober'), value: 'sober', preference: false },
     ];
