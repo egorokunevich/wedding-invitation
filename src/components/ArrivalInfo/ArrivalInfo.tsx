@@ -27,6 +27,7 @@ const ArrivalInfo = () => {
       <div className="font-Classic font-light text-WHITE flex flex-col items-start gap-2">
         {createSchedule('14:30', t('arrivalTransfer'))}
         {createSchedule('15:00', t('arrivalBuffet'))}
+        {createSchedule('16:00', t('ceremony'))}
       </div>
     </Section>
   );
