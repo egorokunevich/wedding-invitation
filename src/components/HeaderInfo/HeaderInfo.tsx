@@ -6,6 +6,7 @@ import { useTranslations } from 'next-intl';
 import Section from '../Section/Section';
 import Divider from '../Divider/Divider';
 import TransparentBackground from '../TransparentBackground/TransparentBackground';
+import ArrivalInfo from '../ArrivalInfo/ArrivalInfo';
 
 const EVENT_DATE = '23.08.2025';
 
@@ -107,6 +108,8 @@ const HeaderInfo = () => {
         <div className="w-full flex flex-col items-center justify-center">
           {renderContent()}
         </div>
+
+        <ArrivalInfo />
       </TransparentBackground>
     </Section>
   );

@@ -39,8 +39,12 @@
   "allDrinks": "Any drinks",
   "sober": "Sober",
   "deadlineInfo": "It is important for us that you give us an answer before",
+  "arrivalTitle": "Arrival details",
+  "arrivalTransfer": "Transfer from Stolbtsy",
+  "arrivalBuffet": "Welcome buffet",
   "nav_invitation": "Invitation",
   "nav_gifts": "Gifts",
   "nav_dressCode": "Dress-code",
-  "nav_feedback": "Contact us"
+  "nav_feedback": "Contact us",
+  "nav_arrival": "Arrival"
 }

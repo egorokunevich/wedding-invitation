@@ -39,8 +39,12 @@
   "allDrinks": "Любые напитки",
   "sober": "Трезвенник-язвенник",
   "deadlineInfo": "Для нас важно, чтобы Вы дали ответ до",
+  "arrivalTitle": "Детали прибытия",
+  "arrivalTransfer": "Трансфер из Столбцов",
+  "arrivalBuffet": "Приветственный фуршет",
   "nav_invitation": "Приглашение",
   "nav_gifts": "Подарки",
   "nav_dressCode": "Дресс-код",
-  "nav_feedback": "Контакты"
+  "nav_feedback": "Контакты",
+  "nav_arrival": "Прибытие"
 }
