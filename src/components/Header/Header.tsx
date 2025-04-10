@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import LanguageToggle from '../LanguageToggle/LanguageToggle';
 import { useTranslations } from 'next-intl';
+import Link from 'next/link';
 
 const Header = () => {
   const t = useTranslations();
@@ -11,34 +12,48 @@ const Header = () => {
   const renderMenuItems = () => {
     return (
       <>
-        <a
-          href="#invitation"
+        <Link
+          href="/#invitation"
           onClick={() => setIsBurgerOpen(false)}
           className="hover:text-ACCENT border-b-[1px] border-transparent hover:border-ACCENT duration-200 flex items-center p-2.5"
         >
           {t('nav_invitation')}
-        </a>
-        <a
-          href="#gifts"
+        </Link>
+        <Link
+          href="/#arrival"
+          onClick={() => setIsBurgerOpen(false)}
+          className="hover:text-ACCENT border-b-[1px] border-transparent hover:border-ACCENT duration-200 flex items-center p-2.5"
+        >
+          {t('nav_arrival')}
+        </Link>
+        <Link
+          href="/#gifts"
           onClick={() => setIsBurgerOpen(false)}
           className="hover:text-ACCENT border-b-[1px] border-transparent hover:border-ACCENT duration-200 flex items-center p-2.5"
         >
           {t('nav_gifts')}
-        </a>
-        <a
-          href="#dress-code"
+        </Link>
+        <Link
+          href="/#dress-code"
           onClick={() => setIsBurgerOpen(false)}
           className="hover:text-ACCENT border-b-[1px] border-transparent hover:border-ACCENT duration-200 flex items-center p-2.5"
         >
           {t('nav_dressCode')}
-        </a>
-        <a
-          href="#contact-form"
+        </Link>
+        <Link
+          href="/#contact-form"
           onClick={() => setIsBurgerOpen(false)}
           className="hover:text-ACCENT border-b-[1px] border-transparent hover:border-ACCENT duration-200 flex items-center p-2.5"
         >
           {t('nav_feedback')}
-        </a>
+        </Link>
+        <Link
+          href="/catfood"
+          onClick={() => setIsBurgerOpen(false)}
+          className="hover:text-ACCENT border-b-[1px] border-transparent hover:border-ACCENT duration-200 flex items-center p-2.5"
+        >
+          {t('nav_catfood')}
+        </Link>
       </>
     );
   };
