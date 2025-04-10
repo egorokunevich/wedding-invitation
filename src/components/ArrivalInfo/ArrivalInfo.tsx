@@ -10,8 +10,8 @@ const ArrivalInfo = () => {
     return (
       <div className="flex items-center font-light">
         <span className="text-ACCENT">{time}</span>
-        <span className="px-5"></span>
-        <span>{detailText}</span>
+        <span className="px-3 md:px-5"></span>
+        <span className="text-xl md:text-2xl">{detailText}</span>
       </div>
     );
   };
