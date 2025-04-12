@@ -1,9 +1,10 @@
 {
   "weddingInvitation": "ПРИГЛАШЕНИЕ НА СВАДЬБУ",
   "invitationInfo": "МЫ ПРИГЛАШАЕМ ВАС ОТПРАЗДНОВАТЬ С НАМИ",
-  "dearSir": "Уважаемый",
-  "dearMadam": "Уважаемая",
-  "dearGuest": "Дорогой Гость",
+  "dearSir": "Дорогой",
+  "dearMadam": "Дорогая",
+  "dearGuests": "Дорогие",
+  "guests": "Гости",
   "eventDate": "ДАТА",
   "location": "ЛОКАЦИЯ",
   "locationName": "СТАНЬКОВО",

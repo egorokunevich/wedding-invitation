@@ -92,6 +92,7 @@ a {
     height: 12px;
     background-color: transparent;
     transition: 0.15s;
+    pointer-events: none;
   }
 
   .check-input:hover .input-wrapper:has(:not(input:checked))::after {

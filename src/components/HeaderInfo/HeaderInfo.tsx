@@ -48,9 +48,9 @@ const HeaderInfo = () => {
             ? t('dearSir')
             : guestGender === 'female'
             ? t('dearMadam')
-            : t('dearGuest')
+            : t('dearGuests')
         }`}</p>
-        <p className="text-2xl capitalize">{guestName || ''}</p>
+        <p className="text-2xl capitalize">{guestName || t('guests')}</p>
       </HeaderSection>
     );
   };
@@ -92,7 +92,7 @@ const HeaderInfo = () => {
     >
       <TransparentBackground>
         <div className="w-full text-center flex justify-center items-center flex-col gap-7 px-10  py-10">
-          <p className="text-xl font-MeaCulpa text-WHITE">
+          <p className="text-xl tracking-wider font-MeaCulpa text-WHITE">
             {t('weddingInvitation')}
           </p>
           <h1 className="flex gap-4 text-6xl md:text-8xl font-Header text-WHITE">
