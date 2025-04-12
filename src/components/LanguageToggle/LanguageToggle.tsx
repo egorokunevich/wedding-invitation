@@ -28,8 +28,6 @@ const LanguageToggle = () => {
           }`;
         };
         const cleanedPath = path.replace('en', '').replace('ru', '');
-        console.log(getOtherLocale());
-        console.log(cleanedPath);
         router.push(
           `/${getOtherLocale()}/${cleanedPath}${createSearchParams()}`
         );

@@ -8,7 +8,6 @@ import { StaticImport } from 'next/dist/shared/lib/get-img-props';
 import Section from '../Section/Section';
 import Divider from '../Divider/Divider';
 import { useTranslations } from 'next-intl';
-import Link from 'next/link';
 
 const createIcon = (src: string | StaticImport) => {
   return <Image src={src} alt="wine" width={42} height={42} />;
@@ -33,7 +32,7 @@ const Gifts = () => {
       <p className="font-light">
         {t('giftsInfoPart1')}
         <span className="text-ACCENT">
-          <Link href={'/catfood'}>{t('giftsInfoCatFood')}</Link>
+          <a href={'/catfood'}>{t('giftsInfoCatFood')}</a>
         </span>
         {t('giftsInfoPart2')}
       </p>
