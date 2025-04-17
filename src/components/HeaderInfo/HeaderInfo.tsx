@@ -7,6 +7,7 @@ import Section from '../Section/Section';
 import Divider from '../Divider/Divider';
 import TransparentBackground from '../TransparentBackground/TransparentBackground';
 import ArrivalInfo from '../ArrivalInfo/ArrivalInfo';
+import { getCapitalizedGuestName } from '@/utils/getCapitalizedGuestName';
 
 const EVENT_DATE = '23.08.2025';
 
@@ -41,19 +42,8 @@ const HeaderInfo = () => {
   };
 
   const renderGuestInfo = () => {
-    const formattedGuestName = guestName
-      ?.split(' ')
-      .map((word) => {
-        if (word.length === 1) {
-          return word.toLowerCase();
-        }
+    const formattedGuestName = getCapitalizedGuestName(guestName || '');
 
-        const firstLetter = word[0].toUpperCase();
-        const restLetters = word.slice(1).toLowerCase();
-        const capitalizedWord = firstLetter + restLetters;
-        return capitalizedWord;
-      })
-      .join(' ');
     return (
       <HeaderSection>
         <p className="font-light">{`${
