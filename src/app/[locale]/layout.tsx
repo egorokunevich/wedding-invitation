@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: PageProps) {
       url: `https://www.alinaegorwedding.online/${locale === 'ru' ? '' : 'en'}`,
       images: [
         {
-          url: 'https://www.alinaegorwedding.online/og-image.png', // Абсолютный путь
+          url: 'https://www.alinaegorwedding.online/og-image.png',
           width: 1200,
           height: 638,
           alt: locale === 'ru' ? 'Алина и Егор' : 'Alina & Egor',

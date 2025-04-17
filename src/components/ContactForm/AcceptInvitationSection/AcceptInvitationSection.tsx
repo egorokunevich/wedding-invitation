@@ -1,5 +1,4 @@
 import { useTranslations } from 'next-intl';
-// import { useState } from 'react';
 
 export type AcceptionOptions = 'yes' | 'no';
 
@@ -13,10 +12,8 @@ const AcceptInvitationSection = ({
   setAcception,
 }: IAcceptInvitationSectionProps) => {
   const t = useTranslations();
-  // const [selectedAccept, setSelectedAccept] = useState<AcceptionOptions>('yes');
 
   const handleSelect = (value: AcceptionOptions) => {
-    // setSelectedAccept(value);
     setAcception(value);
   };
 

@@ -67,7 +67,6 @@ const HeaderInfo = () => {
           className="w-full h-full flex flex-col items-center justify-center"
         >
           <p className="text-base md:text-2xl">{t('locationName')}</p>
-          {/* <div className="w-[20%] h-[1px] bg-WHITE"></div> */}
           <p className="text-xsm md:text-sm opacity-80">{t('location')}</p>
         </a>
       </HeaderSection>

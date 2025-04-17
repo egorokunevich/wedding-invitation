@@ -1,17 +1,6 @@
 @font-face {
   font-family: 'FleurDeLeah';
   src: url('./fonts/FleurDeLeah-Regular.ttf');
-  /* src: url('./fonts/MeaCulpa-Regular.ttf'); */
-}
-
-@font-face {
-  font-family: 'MeaCulpa';
-  src: url('./fonts/MeaCulpa-Regular.ttf');
-}
-
-@font-face {
-  font-family: 'Birthstone';
-  src: url('./fonts/Birthstone-Regular.ttf');
 }
 
 @font-face {
@@ -21,7 +10,6 @@
 
 @theme {
   --font-Header: FleurDeLeah, 'sans-serif';
-  --font-Title: Birthstone, 'sans-serif';
   --font-Classic: Crimson, 'sans-serif';
 
   --color-BLACK: #00100b;
