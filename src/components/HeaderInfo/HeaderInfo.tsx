@@ -41,6 +41,19 @@ const HeaderInfo = () => {
   };
 
   const renderGuestInfo = () => {
+    const formattedGuestName = guestName
+      ?.split(' ')
+      .map((word) => {
+        if (word.length === 1) {
+          return word.toLowerCase();
+        }
+
+        const firstLetter = word[0].toUpperCase();
+        const restLetters = word.slice(1).toLowerCase();
+        const capitalizedWord = firstLetter + restLetters;
+        return capitalizedWord;
+      })
+      .join(' ');
     return (
       <HeaderSection>
         <p className="font-light">{`${
@@ -50,7 +63,7 @@ const HeaderInfo = () => {
             ? t('dearMadam')
             : t('dearGuests')
         }`}</p>
-        <p className="text-2xl capitalize">{guestName || t('guests')}</p>
+        <p className="text-2xl">{formattedGuestName || t('guests')}</p>
       </HeaderSection>
     );
   };

@@ -14,7 +14,7 @@ import MessageField from './MessageField/MessageField';
 import Divider from '../Divider/Divider';
 import InfoIcon from '../Icons/InfoIcon';
 
-const DEADLINE_DATE = '01.05.2025';
+const DEADLINE_DATE = '15.05.2025';
 
 emailjs.init(process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!);
 
